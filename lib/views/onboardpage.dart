@@ -1,0 +1,118 @@
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+class OnboardPage extends StatelessWidget {
+  const OnboardPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: const Color(0xfff6f7f9),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.only(top: 50, left: 20, right: 20),
+          child:
+              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            Row(
+              children: [
+                const Icon(
+                  Icons.home,
+                  color: Color(0xff87D8DA),
+                ),
+                Text(
+                  'Home',
+                  style: GoogleFonts.roboto(
+                      fontSize: 20,
+                      color: const Color(0xff87D8DA),
+                      fontWeight: FontWeight.w500),
+                ),
+                Text(
+                  'bhase',
+                  style: GoogleFonts.roboto(
+                      fontSize: 20,
+                      color: const Color(0xffDCAE46),
+                      fontWeight: FontWeight.w500),
+                ),
+              ],
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Row(
+              children: [
+                Text(
+                  'Looking',
+                  style: GoogleFonts.roboto(
+                      color: const Color(0xff87D8DA),
+                      fontSize: 30,
+                      fontWeight: FontWeight.w500),
+                ),
+                Text(
+                  ' for an',
+                  style: GoogleFonts.roboto(
+                      color: const Color(0xffDCAE46),
+                      fontSize: 30,
+                      fontWeight: FontWeight.w500),
+                )
+              ],
+            ),
+            Text(
+              'elegant house this \nis the place',
+              style: GoogleFonts.roboto(
+                  color: Colors.black,
+                  fontSize: 30,
+                  fontWeight: FontWeight.w500),
+            ),
+            const SizedBox(
+              height: 18,
+            ),
+            //
+            Text(
+              'Welcome friends, are you looking \nfor us?',
+              style: GoogleFonts.roboto(
+                  color: Colors.black45,
+                  fontSize: 18,
+                  fontWeight: FontWeight.normal),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            Text(
+              'Congratulations you have found us',
+              style: GoogleFonts.roboto(
+                  color: Colors.black45,
+                  fontSize: 18,
+                  fontWeight: FontWeight.normal),
+            ),
+            const SizedBox(
+              height: 15,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(right: 200.0),
+              child: ElevatedButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color(0xff87D8DA)),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Next ',
+                        style: GoogleFonts.roboto(
+                            color: Colors.white, fontSize: 20),
+                      ),
+                      const Icon(
+                        Icons.arrow_forward,
+                        color: Colors.white,
+                      )
+                    ],
+                  )),
+            ),
+            //Expanded(child: Container()),
+            Image.asset('assets/splash.png'),
+          ]),
+        ),
+      ),
+    );
+  }
+}

@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:real_estate_app/components/estateview.dart';
@@ -29,33 +30,38 @@ class EstateCardView extends StatelessWidget {
           color: Colors.black.withOpacity(0.5),
           borderRadius: BorderRadius.circular(20),
         ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              'Let\'s buy a house \nhere ',
-              style: GoogleFonts.roboto(
-                  color: Colors.white,
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  'Diskon 10%',
-                  style: GoogleFonts.roboto(color: Colors.white, fontSize: 16),
-                ),
-                Text(
-                  '10 october 2022',
-                  style: GoogleFonts.roboto(color: Colors.white, fontSize: 16),
-                ),
-              ],
-            ),
-          ],
+        child: FadeInUp(
+          animate: true,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Let\'s buy a house \nhere ',
+                style: GoogleFonts.roboto(
+                    color: Colors.white,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Diskon 10%',
+                    style:
+                        GoogleFonts.roboto(color: Colors.white, fontSize: 16),
+                  ),
+                  Text(
+                    '10 october 2022',
+                    style:
+                        GoogleFonts.roboto(color: Colors.white, fontSize: 16),
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -84,63 +90,67 @@ class EstateSecondCard extends StatelessWidget {
                   image: AssetImage(
                     'assets/estate2.jpg',
                   ))),
-          child: SizedBox(
-            height: 80,
-            width: MediaQuery.of(context).size.width,
-            child: ClipRRect(
-              borderRadius: const BorderRadius.only(
-                  bottomLeft: Radius.circular(20),
-                  bottomRight: Radius.circular(20)),
-              child: BackdropFilter(
-                filter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
-                child: Padding(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            '123 Junilun Zahra',
-                            style: GoogleFonts.roboto(
-                                fontSize: 19,
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold),
-                          ),
-                          Container(
-                            padding: const EdgeInsets.all(3),
-                            decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(30)),
-                            child: const Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceAround,
-                              children: [
-                                Icon(
-                                  Icons.star,
-                                  color: Colors.orange,
-                                ),
-                                Text('  3.6'),
-                              ],
+          child: FadeInUp(
+            animate: true,
+            child: SizedBox(
+              height: 80,
+              width: MediaQuery.of(context).size.width,
+              child: ClipRRect(
+                borderRadius: const BorderRadius.only(
+                    bottomLeft: Radius.circular(20),
+                    bottomRight: Radius.circular(20)),
+                child: BackdropFilter(
+                  filter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 20, vertical: 15),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              '123 Junilun Zahra',
+                              style: GoogleFonts.roboto(
+                                  fontSize: 19,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold),
                             ),
-                          )
-                        ],
-                      ),
-                      const Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            '\$123/mo',
-                            style: TextStyle(color: Colors.white),
-                          ),
-                          Text(
-                            '1 Room meet',
-                            style: TextStyle(color: Colors.white),
-                          )
-                        ],
-                      ),
-                    ],
+                            Container(
+                              padding: const EdgeInsets.all(3),
+                              decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(30)),
+                              child: const Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
+                                children: [
+                                  Icon(
+                                    Icons.star,
+                                    color: Colors.orange,
+                                  ),
+                                  Text('3.6'),
+                                ],
+                              ),
+                            )
+                          ],
+                        ),
+                        const Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              '\$123/mo',
+                              style: TextStyle(color: Colors.white),
+                            ),
+                            Text(
+                              '1 Room meet',
+                              style: TextStyle(color: Colors.white),
+                            )
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),
@@ -169,62 +179,66 @@ class EstateThirdCard extends StatelessWidget {
               image: AssetImage(
                 'assets/estate1.jpg',
               ))),
-      child: SizedBox(
-        height: 80,
-        width: MediaQuery.of(context).size.width,
-        child: ClipRRect(
-          borderRadius: const BorderRadius.only(
-              bottomLeft: Radius.circular(20),
-              bottomRight: Radius.circular(20)),
-          child: BackdropFilter(
-            filter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        '123 Jolte Zahro',
-                        style: GoogleFonts.roboto(
-                            fontSize: 19,
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold),
-                      ),
-                      Container(
-                        padding: const EdgeInsets.all(3),
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(30)),
-                        child: const Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: [
-                            Icon(
-                              Icons.star,
-                              color: Colors.orange,
-                            ),
-                            Text('  3.6'),
-                          ],
+      child: FadeInUp(
+        animate: true,
+        child: SizedBox(
+          height: 80,
+          width: MediaQuery.of(context).size.width,
+          child: ClipRRect(
+            borderRadius: const BorderRadius.only(
+                bottomLeft: Radius.circular(20),
+                bottomRight: Radius.circular(20)),
+            child: BackdropFilter(
+              filter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
+              child: Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          '123 Jolte Zahro',
+                          style: GoogleFonts.roboto(
+                              fontSize: 19,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold),
                         ),
-                      )
-                    ],
-                  ),
-                  const Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        '\$123/mo',
-                        style: TextStyle(color: Colors.white),
-                      ),
-                      Text(
-                        '1 Room meet',
-                        style: TextStyle(color: Colors.white),
-                      )
-                    ],
-                  ),
-                ],
+                        Container(
+                          padding: const EdgeInsets.all(3),
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(30)),
+                          child: const Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: [
+                              Icon(
+                                Icons.star,
+                                color: Colors.orange,
+                              ),
+                              Text('3.6'),
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                    const Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          '\$123/mo',
+                          style: TextStyle(color: Colors.white),
+                        ),
+                        Text(
+                          '1 Room meet',
+                          style: TextStyle(color: Colors.white),
+                        )
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ),
           ),

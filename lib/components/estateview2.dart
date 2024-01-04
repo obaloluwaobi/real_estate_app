@@ -3,9 +3,26 @@ import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:real_estate_app/components/estateview.dart';
+import 'package:webview_flutter/webview_flutter.dart';
 
-class EstateSecondView extends StatelessWidget {
+class EstateSecondView extends StatefulWidget {
   const EstateSecondView({super.key});
+
+  @override
+  State<EstateSecondView> createState() => _EstateSecondViewState();
+}
+
+class _EstateSecondViewState extends State<EstateSecondView> {
+  late final WebViewController controller;
+
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    controller = WebViewController()
+      ..setJavaScriptMode(JavaScriptMode.unrestricted)
+      ..loadRequest(Uri.parse(
+          'https://www.google.com/maps/search/real+estate+near+usa/@33.5527735,-117.9679086,4z/data=!3m1!4b1?entry=ttu'));
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -110,11 +127,10 @@ class EstateSecondView extends StatelessWidget {
                   ),
                   Container(
                     margin: const EdgeInsets.symmetric(horizontal: 20),
-                    height: 200,
-                    decoration: const BoxDecoration(
-                        image: DecorationImage(
-                            fit: BoxFit.cover,
-                            image: AssetImage('assets/map.jpg'))),
+                    height: 400,
+                    child: WebViewWidget(
+                      controller: controller,
+                    ),
                   )
                 ],
               ),

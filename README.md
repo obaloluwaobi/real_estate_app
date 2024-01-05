@@ -1,22 +1,22 @@
-#Flutter Real Estate with animation - Day 14
+# Flutter Real Estate with animation - Day 14
 
 Watch it on Youtube link.
 
-#Previous Designs
+# Previous Designs
 Youtube link
 
-#Development Setup 
+# Development Setup 
 Clone the repo and run the following  
 
-'''dart
+''' dart
 flutter pub get
 flutter run
-'''
+''' 
 
-#ScreenShots 
+# ScreenShots 
 img
 
-#Gif or video
+# Gif or video
 gif
 
 #Linkz

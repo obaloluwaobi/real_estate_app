@@ -51,8 +51,11 @@ class _BottomNavState extends State<BottomNav> {
       child: Text('Settings'),
     ),
     const Center(
-      child:
-          Text('Check out Obaloluwaobi on Github for more projects💗, thanks'),
+      child: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 20.0),
+        child: Text(
+            'Check out Obaloluwaobi on Github for more projects💗, thanks'),
+      ),
     ),
   ];
 }

@@ -5,7 +5,7 @@
 # Development Setup 
 Clone the repo and run the following  
 
-```dart
+```flutter
 flutter pub get
 flutter run
 ```

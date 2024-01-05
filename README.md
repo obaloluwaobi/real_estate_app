@@ -20,10 +20,6 @@ img
 
 # Previous Designs
 Youtube link
-#Linkz
-Website
-Youtube
-Twitter
-instagram
-Linkedin
-			#buy me a coffee-link
+
+# Links
+[yt](https://twitter.com/oba_obidoyin)

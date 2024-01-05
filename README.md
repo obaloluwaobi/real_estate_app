@@ -1,16 +1,28 @@
-# real_estate_app
+#Flutter Real Estate with animation - Day 14
 
-A new Flutter project.
+Watch it on Youtube link.
 
-## Getting Started
+#Previous Designs
+Youtube link
 
-This project is a starting point for a Flutter application.
+#Development Setup 
+Clone the repo and run the following  
 
-A few resources to get you started if this is your first Flutter project:
+'''dart
+flutter pub get
+flutter run
+'''
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+#ScreenShots 
+img
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+#Gif or video
+gif
+
+#Linkz
+Website
+Youtube
+Twitter
+instagram
+Linkedin
+			#buy me a coffee-link

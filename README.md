@@ -1,28 +1,26 @@
-#Flutter Real Estate with animation - Day 14
+# Flutter Real Estate with animation - Day 14
 
-Watch it on Youtube link.
 
-#Previous Designs
-Youtube link
 
-#Development Setup 
+# Development Setup 
 Clone the repo and run the following  
 
-'''dart
+```
 flutter pub get
 flutter run
-'''
+```
 
-#ScreenShots 
-img
-
-#Gif or video
+# Gif or video
 gif
 
-#Linkz
-Website
-Youtube
-Twitter
-instagram
-Linkedin
-			#buy me a coffee-link
+# ScreenShots 
+img
+
+
+# Previous Designs
+Youtube link
+
+# Links
+[Twitter/X](https://twitter.com/oba_obidoyin)
+
+<a href="https://www.buymeacoffee.com/obaobidoyin" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>

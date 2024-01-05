@@ -51,7 +51,8 @@ class _BottomNavState extends State<BottomNav> {
       child: Text('Settings'),
     ),
     const Center(
-      child: Text('Profile'),
+      child:
+          Text('Check out Obaloluwaobi on Github for more projects💗, thanks'),
     ),
   ];
 }

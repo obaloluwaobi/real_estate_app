@@ -5,8 +5,8 @@ import 'package:real_estate_app/views/onboardpage.dart';
 void main() {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
-  runApp(const MyApp());
   FlutterNativeSplash.remove();
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {

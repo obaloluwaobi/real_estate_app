@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:real_estate_app/components/estatecard.dart';
+import 'package:real_estate_app/components/estatecardwidgets/firstcard.dart';
+import 'package:real_estate_app/components/estatecardwidgets/secondcard.dart';
+import 'package:real_estate_app/components/estatecardwidgets/thirdcard.dart';
 import 'package:real_estate_app/components/estatelogo.dart';
 
+//Homepage for the real estate app
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -76,6 +79,7 @@ class _HomePageState extends State<HomePage> {
   }
 }
 
+//searchdesignwidget
 class SearchWidget extends StatelessWidget {
   const SearchWidget({
     super.key,

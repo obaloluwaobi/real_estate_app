@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:real_estate_app/views/pages/homepage.dart';
 
+//Bottom navigation bar
 class BottomNav extends StatefulWidget {
   const BottomNav({super.key});
 
@@ -26,6 +27,7 @@ class _BottomNavState extends State<BottomNav> {
           showUnselectedLabels: true,
           selectedItemColor: const Color(0xff87D8DA),
           unselectedItemColor: Colors.grey[800],
+          //icons and text for the navbar
           items: const [
             BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
             BottomNavigationBarItem(
@@ -39,6 +41,7 @@ class _BottomNavState extends State<BottomNav> {
     );
   }
 
+//pages
   final List _pages = [
     const HomePage(),
     const Center(

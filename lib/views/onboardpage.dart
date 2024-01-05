@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:real_estate_app/components/estatelogo.dart';
 import 'package:real_estate_app/views/bottomnav.dart';
 
+//welcome page
 class OnboardPage extends StatelessWidget {
   const OnboardPage({super.key});
 
@@ -11,9 +12,12 @@ class OnboardPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: const Color(0xfff6f7f9),
-        body: Center(
+        body: SizedBox(
+          height: MediaQuery.of(context).size.height,
+          width: MediaQuery.of(context).size.width,
           child: SingleChildScrollView(
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Padding(
                   padding: const EdgeInsets.only(top: 55, left: 20, right: 20),
@@ -108,7 +112,8 @@ class OnboardPage extends StatelessWidget {
                       ],
                     ),
                   ),
-                ), //Expanded(child: Container()),
+                ),
+                // Expanded(child: Container()),
                 FadeInDown(
                   child: Image.asset('assets/splash.png'),
                 ),

@@ -2,17 +2,18 @@ import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:real_estate_app/views/pages/homepage.dart';
+import 'package:real_estate_app/components/estatecarddetails/estateview.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
-class EstateView extends StatefulWidget {
-  const EstateView({super.key});
+//estate thirdcard details
+class EstateSecondView extends StatefulWidget {
+  const EstateSecondView({super.key});
 
   @override
-  State<EstateView> createState() => _EstateViewState();
+  State<EstateSecondView> createState() => _EstateSecondViewState();
 }
 
-class _EstateViewState extends State<EstateView> {
+class _EstateSecondViewState extends State<EstateSecondView> {
   late final WebViewController controller;
 
   void initState() {
@@ -44,8 +45,9 @@ class _EstateViewState extends State<EstateView> {
                     decoration: const BoxDecoration(
                         image: DecorationImage(
                       fit: BoxFit.cover,
-                      image: AssetImage('assets/estate2.jpg'),
+                      image: AssetImage('assets/estate1.jpg'),
                     )),
+                    //the three small image design on the estate view
                     child: const Extraview(),
                   ),
                   Padding(
@@ -74,7 +76,7 @@ class _EstateViewState extends State<EstateView> {
                       children: [
                         FadeInUp(
                           child: Text(
-                            '123 Junilun Zahra',
+                            '123 Jolte Zahro',
                             style: GoogleFonts.roboto(
                                 fontSize: 25,
                                 color: Colors.black,
@@ -125,6 +127,7 @@ class _EstateViewState extends State<EstateView> {
                   const SizedBox(
                     height: 20,
                   ),
+                  //mapview
                   Container(
                     margin: const EdgeInsets.symmetric(horizontal: 20),
                     height: 400,
@@ -163,94 +166,6 @@ class _EstateViewState extends State<EstateView> {
           )
         ],
       ),
-    );
-  }
-}
-
-class Extraview extends StatelessWidget {
-  const Extraview({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Container(
-            padding: const EdgeInsets.all(1),
-            decoration: const BoxDecoration(
-                color: Colors.white, shape: BoxShape.circle),
-            child: IconButton(
-              onPressed: () {
-                Navigator.pop(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const HomePage(),
-                    ));
-              },
-              icon: const Icon(Icons.arrow_back),
-              color: Colors.black,
-            )),
-        FadeInUp(
-          animate: true,
-          child: Container(
-            alignment: Alignment.centerRight,
-            child: Column(
-              children: [
-                Container(
-                  height: 80,
-                  width: 80,
-                  decoration: BoxDecoration(
-                      image: const DecorationImage(
-                          fit: BoxFit.cover,
-                          image: AssetImage(
-                            'assets/view3.jpg',
-                          )),
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(20)),
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                Container(
-                  height: 80,
-                  width: 80,
-                  decoration: BoxDecoration(
-                      image: const DecorationImage(
-                          fit: BoxFit.cover,
-                          image: AssetImage('assets/view1.jpg')),
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(20)),
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                Container(
-                  height: 80,
-                  width: 80,
-                  decoration: BoxDecoration(
-                      image: const DecorationImage(
-                          fit: BoxFit.cover,
-                          image: AssetImage('assets/view2.jpg')),
-                      borderRadius: BorderRadius.circular(20)),
-                  child: Container(
-                    decoration: BoxDecoration(
-                        color: Colors.black.withOpacity(0.6),
-                        borderRadius: BorderRadius.circular(20)),
-                    alignment: Alignment.center,
-                    child: const Text(
-                      '+5',
-                      style: TextStyle(color: Colors.white, fontSize: 19),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-        )
-      ],
     );
   }
 }

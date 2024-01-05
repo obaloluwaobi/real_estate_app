@@ -5,10 +5,10 @@
 # Development Setup 
 Clone the repo and run the following  
 
-'''
+```
 flutter pub get
 flutter run
-''' 
+```
 
 # Gif or video
 gif

@@ -5,14 +5,14 @@
 # Development Setup 
 Clone the repo and run the following  
 
-```flutter
+```dart
 flutter pub get
 flutter run
 ```
 
 
 # ScreenShots 
-## splashscreen
+## onboardpage
 ![Screenshot_1704491022](https://github.com/obaloluwaobi/real_estate_app/assets/101903208/ab6c8b62-9f50-4996-8aa3-6a1bbea443d7)
 
 ## homepage
